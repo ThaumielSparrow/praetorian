@@ -1,12 +1,14 @@
-from pydoc import describe
 import setuptools
 
-with open('README.md', 'r') as f:
-    description = f.read()
+with open('README.md', 'r') as readme:
+    description = readme.read()
+
+with open('requirements.txt', 'r') as reqfile:
+    requirements = reqfile.readlines()
 
 setuptools.setup(
     name='praetorian',
-    version='0.1.0a',
+    version='0.2.0a',
     author='Luzhou Zhang',
     author_email='lzhang1337@gmail.com',
     packages=['praetorian'],
@@ -16,5 +18,8 @@ setuptools.setup(
     url='https://github.com/ThaumielSparrow/praetorian',
     license='BSD-3-Clause',
     python_requires='>=3.6',
-    install_requires=[]
+    requires=requirements,
+    install_requires=[],
+    keywords='cybersecurity pentesting payload meterpreter listener socket server',
+    platforms=['any'],
 )
