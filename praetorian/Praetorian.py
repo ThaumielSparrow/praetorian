@@ -27,7 +27,7 @@ class TestingSocket:
         self.target_port = target_port
     
 
-    def create_socket(self, socket_type='TCP') -> socket.socket:
+    def initialize_socket(self, socket_type='TCP') -> socket.socket:
         """
         Create a socket of the specified type. Currently supports TCP and UDP. Defaults to TCP.
 

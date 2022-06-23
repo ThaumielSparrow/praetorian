@@ -6,6 +6,6 @@ theoretically scalable within volumes in a seamless manner.
     https://github.com/ThaumielSparrow/praetorian
 """
 
-import Praetorian
+from .praetorian import *
 
-__version__ = '0.1.0a'
+from .utils import parallelize
